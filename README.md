@@ -4,6 +4,35 @@
 
 Il est fortement inspiré de cet [outil](https://www.service-public.fr/simulateur/calcul/CongeLogement) réalisés par les services publics 🙏.
 
+## Utilisation 
+### Exemple d'utilisation
+
+```typst
+#import "@preview/preavis:0.1.0":*
+#lettre_preavis(
+  locataire: locataire(
+     "Dupont locataire",
+     "Jean",
+     adresse(
+       "123 rue de la Paix",
+       "75000",
+       "Paris",
+       complement: "Appartement 2"
+    )
+  ),
+  proprietaire: proprietaire(
+     "Martin proprietaire",
+    "Sophie",
+     adresse(
+       "456 avenue des Champs-Élysées",
+       "75008",
+       "Paris"
+    ),
+    "Madame"
+  ),
+  date_etat_des_lieux: datetime(year:2024, month:9, day:21)
+)
+```
 ## TODO 
 - [ ] Supporter plusieurs locataires
 - [ ] Supporter la législation zone tendu en fonction du code postal
